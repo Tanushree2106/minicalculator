@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cal {
+            background-color:#B3CDE0;
+            width: 25%;
+            margin-top: 8%;
+            padding: 4%;
+            border:3px solid#2D5D4F;
+        }
+
+        .cal2 {
+            background-color: white;
+            width: 50%;
+            border: 2px solid#2D5D4F;
+        }
+
+        .calci {
+            width: 50%;
+            border: 2px solid#2D5D4F;
+
+        }
+        .btn{
+         margin: 2%;
+         border: 2px solid#2D5D4F;
+        }
+        .head{
+            background-color: black;
+            color: white;
+            width: 40%;
+           
+        }
+    </style>
+
+</head>
+
+<body>
+    <center>
+       <div class="head">
+        <h1 style="margin-top: 5%; font-weight: 900;" >Mini calculator</h1>
+       </div>
+        <div class="cal">
+
+            <input class="calci" type="number" name="" id="a" placeholder="num1"><br><br>
+            <input class="calci" type="number" name="" id="b" placeholder="num2"><br><br>
+            <div class="cal2">
+                <label id="abc">0</label>
+            </div><br>
+            
+                <button class="btn" onclick="add()">+</button>
+                <button class="btn" onclick="mul()">*</button>
+                <button class="btn" onclick="div()">/</button>
+                <button class="btn" onclick="sub()">-</button>
+            </div>
+            <br>
+    </center>
+
+
+    <script>
+        function add() {
+            var a = parseInt(document.getElementById("a").value);
+            var b = parseInt(document.getElementById("b").value);
+            c = a + b;
+            document.getElementById("abc").innerHTML = c;
+        }
+
+        function mul() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            c = a * b;
+            document.getElementById("abc").innerHTML = c;
+        }
+
+        function sub() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            c = a - b;
+            document.getElementById("abc").innerHTML = c;
+        }
+
+        function div() {
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            c = a / b;
+            document.getElementById("abc").innerHTML = c;
+        }
+
+
+    </script>
+</body>
+
+</html>
